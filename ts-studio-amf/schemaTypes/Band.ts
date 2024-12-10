@@ -15,9 +15,13 @@ export const bandType = defineType({
     defineField({
       name: 'bio',
       title: 'Biography',
-      type: 'text',
+      type: 'array',
       description: 'A short bio of the band.',
-      validation: (Rule) => Rule.max(500),
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'genre',
@@ -28,6 +32,8 @@ export const bandType = defineType({
           {title: 'Heavy Metal', value: 'heavymetal'},
           {title: 'Death Metal', value: 'deathmetal'},
           {title: 'Black Metal', value: 'blackmetal'},
+          {title: 'Stoner Rock', value: 'stonerrock'},
+          {title: 'New York Hardcore', value: 'newyorkhardcore'},
         ],
         layout: 'dropdown',
       },
