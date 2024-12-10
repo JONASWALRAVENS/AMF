@@ -15,8 +15,6 @@
     ];
     return genres.find((g) => g.value === genre)?.title || genre;
   }
-
-  console.log($bands);
 </script>
 
 <h1 class="hidden">Festival Lineup</h1>
