@@ -7,9 +7,12 @@
 	<a href="/">Home</a>
 	<a href="/lineup">Lineup</a>
 	<a href="/tickets">Tickets</a>
+
 </nav>
 
-{@render children()}
+<div class="page-content">
+	{@render children()}
+</div>
 
 <style>
 	nav {
@@ -25,5 +28,9 @@
 		color: white;
 		text-decoration: none;
 		margin: 0 10px;
+	}
+	
+	.page-content {
+		padding: 1rem;
 	}
 </style>
